@@ -11,11 +11,17 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        logging.info(self.request.path)
-        template = JINJA_ENVIRONMENT.get_template('templates/index.html')
-        self.response.write(template.render())
 
+        try:
+            logging.info(self.request.path)
+            template = JINJA_ENVIRONMENT.get_template('templates/' + self.request.path)
+            self.response.write(template.render())
+        except:
+            logging.info(self.request.path)
+            template = JINJA_ENVIRONMENT.get_template('templates/index.html')
+            self.response.write(template.render())
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/', MainHandler),
+    ('/.*', MainHandler)
 ], debug=True)

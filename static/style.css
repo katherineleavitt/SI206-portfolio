@@ -6,6 +6,71 @@ body{
 	min-width: 500px;
 }
 
+header h1{
+	text-align: center;
+	font-family: sans-serif;
+}
+
+#mail{
+	text-align: center;
+	display: inline-block;
+}
+
+img{
+	width: 4.5%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+header h4{
+	font-family: sans-serif;
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 5px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #1F71FF;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #94BBFF;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
 
 @media only screen and (min-width: 800px) {
 	body{
