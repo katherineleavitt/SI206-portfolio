@@ -31,17 +31,13 @@ p {
 	vertical-align: middle;
 }
 
-
-
-
 .dropbtn {
     background-color: #2D88B5;
     color: white;
     padding: 10px;
     font-size: 18px;
     border: none;
-    vertical-align: right;
-    border-radius: 20%;
+    vertical-align: center;
     position: relative;
 }
 
@@ -147,7 +143,6 @@ footer, .pagecontent:after {
 }
 
 header {
-    width: 100%;
     text-align: center;
     z-index: 1;
 
@@ -169,10 +164,9 @@ form {
         display: inline;
     }
 
-
-
-
-
+    footer {
+        position: relative;
+    }
 
 }
 
@@ -180,16 +174,22 @@ form {
 	.dropbtn {
 	    display: none;
 	}
-
+    #myPills {
+        display: none;
+    }
     .navbar {
         display: inline-block;
-        font-size: 100%;
+        font-size: 200%;
     } 
     .jumbotron {
         text-align: center;
         margin: -100;
         background: url('../static/me.jpg') no-repeat center center;
         background-size: 100%;
+    }
+
+    body {
+        position: relative;
     }
 	
 }

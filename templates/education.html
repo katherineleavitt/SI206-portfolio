@@ -13,9 +13,15 @@
 
 {% endblock %}
 {% block content %} 
+
+	<div class="container">
 	<div class="col-sm-12 col-md-6">
 		<h2>Courses</h2>
 		<ul>
+			<li>ENGR 101: Introduction to Programming</li>
+				<ul>
+					<li>Learned basics of programming languages: C++ and MATLAB.</li>
+				</ul>
 			<li>SI 206: Agile Web Development</li>
 				<ul>
 					<li>Learned sweet web development skills.</li>
@@ -56,13 +62,20 @@
 			<li>Girls in EECS (gEECS)</li>
 			<li>Supporting Women in Engineering (SWE)</li>
 			<li>Delta Gamma Sorority</li>
+			<li>Tailgating</li>
 		</ul>
 	</div>
+	
+	<div class="col-sm-12 col-md-6">
+  		<div class="timer" onload="getTimeRemaining(endtime);">
+  			<h3>Countown to Football Saturdays:</h3>
+  				<h4>
+  					<span id="days"></span> Days!
+  				</h4>  
+  		</div>
+  	</div>
 	<div class="col-sm-12 col-md-6 collegepics" >
 		<h3>Some snapshots of me at college:</h3>
-		<div class="col-sm-12 col-md-6 col-lg-3">
-		    <img src = "static/dg.jpg" alt = "dg" class="img-rounded"/>
-		</div>
 		<div class="col-sm-12 col-md-6 col-lg-3">
 		    <img src = "static/gameday.jpg" alt = "gameday" class="img-rounded"/>
 		</div>
@@ -72,13 +85,14 @@
 		<div class="col-sm-12 col-md-6 col-lg-3">
 		    <img src = "static/winter.jpg" alt = "winter" class="img-rounded"/>
 		</div>
+		<div class="col-sm-12 col-md-6 col-lg-3">
+		    <img src = "static/dg.jpg" alt = "dg" class="img-rounded"/>
+		</div>
+		
+		</div>
+		
+		
   	</div>
-  	<div>
-  		<div class="timer" onload="getTimeRemaining(endtime);">
-  			<h3>Countown to Football Saturdays:</h3>
-  				<h4>
-  					<span id="days"></span> Days!
-  				</h4>  
-  		</div>
-  	</div>
+
+  	
 {%endblock%}

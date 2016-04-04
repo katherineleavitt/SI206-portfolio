@@ -3,8 +3,10 @@
 	<head>
 		<title>Katherine Leavitt's Portfolio</title>
 	    <link rel="stylesheet" type="text/css" href="static/style.css"/>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<meta charset = "UTF-8">
 		{% block javas %}
 		{% endblock %}
@@ -20,20 +22,17 @@
 	  		</div>
 	 		<div class="col-sm-12 col-md-6">
 	  			<h4><a href="mailto:ksleavit@umich.edu">
-					<img src="static/gmail-icon.png" alt="gmail" id="gmail"/>
-			  	</a>
+					<img src="static/gmail-icon.png" alt="gmail" id="gmail"/></a>
 				ksleavit@umich.edu</h4>
-		  		</div>
 		  	</div>
 		  	<nav class="navbar navbar-light bg-faded">
 			  <div class="nav navbar-nav">
-			    <p><a class="nav-item nav-link active" href="home">Home <span class="sr-only">(current)</span></a>  |  
+			    <p><a class="nav-item nav-link active" href="home">Home<span class="sr-only">(current)</span></a>  |  
 				    <a href="education">Education</a>  |  
 					<a href="work">Work &amp; Projects</a>  |  
 					<a href="contact">Contact</a></p>
 			  </div>
 			</nav>
-			<section id="drop">
 			<div class="dropdown">
 				<button onclick="myFunction()" class="dropbtn img-rounded">&#9776; Menu</button>
 				  <div id="myDropdown" class="dropdown-content img-rounded">
@@ -63,26 +62,20 @@
 				}
 			</script>
 		</section>
-		</div>
-		
 			<ul class="nav nav-pills nav-justified" id="myPills">
-			  <li class="active"><a href="home" data-toggle="tab">Home</a></li>
-				   <li><a href="education">Education</a></li>
-					<li><a href="work">Work &amp; Projects</a></li>
-					<li><a href="contact">Contact</a></li>
+			  		<li class="active"><a data-toggle="pill" href="home">Home</a></li>
+				    <li><a data-toggle="pill" href="education">Education</a></li>
+					<li><a data-toggle="pill" href="work">Work &amp; Projects</a></li>
+					<li><a  data-toggle="pill" href="contact">Contact</a></li>
 			</ul>
+		
 
-			<script type="text/javascript">
-				$('ul.nav.nav-pills.nav-justified li a').click(function() {           
-				    $(this).parent().addClass('active').siblings().removeClass('active');           
-				});
-			</script>
-
+		<script type="text/javascript">
+				
+		</script>
 			
 
 
-
-			<h2>{{pageTitle}}</h2>		
 		</header>
 		<div class="pagecontent">
 			{% block content %}
