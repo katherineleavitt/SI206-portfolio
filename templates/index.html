@@ -10,10 +10,25 @@
 		<meta charset = "UTF-8">
 		{% block javas %}
 		{% endblock %}
+		<script>
+			    $(function(){
+			      $("[href]").each(function(){
+			        if(window.location.href.search($(this).attr('href')) != -1){
+			          $(this).parent().addClass("active");
+			        }
+			      })
+			      $("[href]").each(function(){
+			        if(window.location.href.search($(this).attr('href')) == -1){
+			          $(this).parent().removeClass("active");
+			        }
+			      })
+			    });
+		    </script>
 	</head>
 
 	<body onload = "displayTime();">
 	  <header>
+	  	<div class="jumbotron">
 	  		<div class="col-sm-12 col-md-6">
   				<img src="static/me.jpg" alt="me" class="img-rounded" id="me">
 			</div>
@@ -25,6 +40,7 @@
 					<img src="static/gmail-icon.png" alt="gmail" id="gmail"/></a>
 				ksleavit@umich.edu</h4>
 		  	</div>
+
 		  	<nav class="navbar navbar-light bg-faded">
 			  <div class="nav navbar-nav">
 			    <p><a class="nav-item nav-link active" href="home">Home<span class="sr-only">(current)</span></a>  |  
@@ -32,6 +48,28 @@
 					<a href="work">Work &amp; Projects</a>  |  
 					<a href="contact">Contact</a></p>
 			  </div>
+		</div>
+		<div class="noJumbotron">
+	  		<div class="col-sm-12 col-md-6">
+  				<img src="static/me.jpg" alt="me" class="img-rounded" id="me">
+			</div>
+	  		<div class="col-sm-12 col-md-6">
+	  			<h1>Katherine Leavitt</h1>
+	  		</div>
+	 		<div class="col-sm-12 col-md-6">
+	  			<h4><a href="mailto:ksleavit@umich.edu">
+					<img src="static/gmail-icon.png" alt="gmail" id="gmail"/></a>
+				ksleavit@umich.edu</h4>
+		  	</div>
+
+		  	<nav class="navbar navbar-light bg-faded">
+			  <div class="nav navbar-nav">
+			    <p><a class="nav-item nav-link active" href="home">Home<span class="sr-only">(current)</span></a>  |  
+				    <a href="education">Education</a>  |  
+					<a href="work">Work &amp; Projects</a>  |  
+					<a href="contact">Contact</a></p>
+			  </div>
+		</div>
 			</nav>
 			<div class="dropdown">
 				<button onclick="myFunction()" class="dropbtn img-rounded">&#9776; Menu</button>
@@ -61,20 +99,12 @@
 					}	
 				}
 			</script>
-		</section>
 			<ul class="nav nav-pills nav-justified" id="myPills">
-			  		<li class="active"><a data-toggle="pill" href="home">Home</a></li>
-				    <li><a data-toggle="pill" href="education">Education</a></li>
-					<li><a data-toggle="pill" href="work">Work &amp; Projects</a></li>
-					<li><a  data-toggle="pill" href="contact">Contact</a></li>
+			  		<li class="active"><a href="home">Home</a></li>
+				    <li><a href="education">Education</a></li>
+					<li><a href="work">Work &amp; Projects</a></li>
+					<li><a href="contact">Contact</a></li>
 			</ul>
-		
-
-		<script type="text/javascript">
-				$('ul.nav.nav-pills.nav-justified li a').click(function() {			
-				    $(this).parent().addClass('active').siblings().removeClass('active');			
-				});
-		</script>
 			
 
 

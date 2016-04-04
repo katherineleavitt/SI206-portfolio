@@ -1,7 +1,11 @@
+html body {
+    background-color: #90BDD4;
+}
+
 body {
-	padding: 2%;
-	font-size: 100%;
-	margin: 0 0 100px;
+    padding: 2%;
+    font-size: 100%;
+    margin: 0 0 100px;
     text-align: center;
     position: absolute;
 }
@@ -99,8 +103,7 @@ footer, .pagecontent:after {
 }
 
 html body {
-    background-color: #90BDD4;
-
+    
 }
 
 .collegepics img {
@@ -149,15 +152,23 @@ footer, .pagecontent:after {
 header {
     text-align: center;
     z-index: 1;
-
 }
 
-form {
-    text-align: right;
-    margin-right: 28%;
+.jumbotron {
+     padding: 30px;
+     margin-bottom: 30px;
+     font-size: 21px;
+     font-weight: 200;
+     line-height: 2.1428571435;
+     background-color: #CEE7F0;
+     color: red;
 }
 
-@media only screen and (min-width: 800px) {
+.noJumbotron {
+    display: none;
+}
+
+@media only screen and (min-width: 992px) {
 	.dropbtn {
 	    display: none;
 	}
@@ -171,12 +182,27 @@ form {
     footer {
         position: relative;
     }
+    img {
+        width: 100%;
+        text-align: center;
+    }
+    header {
+        text-align: center;
+        z-index: 1;
+    }
+    .jumbotron {
+        display: none;
+    }
+    .noJumbotron {
+        display: block;
+    }
 
 
 }
 
 @media only screen and (min-width: 1200px) { 
-	.dropbtn {
+	
+    .dropbtn {
 	    display: none;
 	}
     #myPills {
@@ -194,6 +220,21 @@ form {
     .active {
         color: red;
         font-variant: small-caps;
+    }
+
+    .jumbotron {
+        display: block;
+     padding: 30px;
+     margin-bottom: 30px;
+     font-size: 21px;
+     font-weight: 200;
+     line-height: 2.1428571435;
+     color: inherit;
+     background-image: url(../static/pier.jpeg) no-repeat center;
+    }
+
+    .noJumbotron {
+        display: none;
     }
 	
 }
