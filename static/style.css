@@ -1,52 +1,44 @@
-html {
-    position: relative;
-    min-height: 100%;
-}
-
-body{
-	padding:1%;
-	background: red;
+body {
+	padding: 2%;
 	font-size: 100%;
-	min-width: 500px;
-    margin: 0 0 100px; 
+	margin: 0 0 100px;
+    text-align: center;
 }
 
-img{
-	width: 50%;
-	display: inline-block;
-	align: 0 auto;
+img {
+    width: 100%;
+    text-align center;
 }
 
-#name{
-	text-align: center;
-	font-family: sans-serif;
+p {
+    font-family: sans-serif;
 }
 
-#mail{
-	text-align: center;
-	display: block;
-}
-#gmail {
-	width: 4.5%;
-	display: inline-block;
-	vertical-align: middle;
+footer img{
+    width: 40px;
+    display: inline-block;
 }
 
-
-
-header h4{
-	font-family: sans-serif;
+#me {
+	width: 20%;
 	display: inline-block;
 	vertical-align: middle;
-	padding-left: 5px;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    background-color: light gray;
 }
 
 .dropbtn {
     background-color: #1F71FF;
     color: white;
-    padding: 16px;
-    font-size: 16px;
+    padding: 20px;
+    font-size: 18px;
     border: none;
+    vertical-align: right;
+    border-radius: 65%;
 }
 
 .dropbtn:hover, .dropbtn:focus {
@@ -57,6 +49,8 @@ header h4{
     position: relative;
     display: inline-block;
     z-index: 1;
+    float: right;
+
 }
 
 .dropdown-content {
@@ -68,7 +62,7 @@ header h4{
 }
 
 .dropdown-content a {
-    color: black;
+    color: #1F71FF;
     padding: 12px 16px;
     text-decoration: none;
     font-family: sans-serif;
@@ -76,65 +70,61 @@ header h4{
 }
 
 .dropdown-content a:hover {
-	background-color: #f1f1f1
+background-color: #f1f1f1
 }
 
 .show {
-	display:block;
+    display:block;
 }
 
-
-img[title="Twitter"] {
-	width: 4.5%;
-	display: inline-block;
-	vertical-align: middle;
+.nav {
+	display: none;
 }
 
-img[title="Pinterest"] {
-	width: 4.5%;
-	display: inline-block;
-	vertical-align: middle;
-}
-img[title="Facebook"] {
-	width: 4.5%;
-	display: inline-block;
-	vertical-align: middle;
-}
-img[title="LinkedIn"] {
-	width: 4.5%;
-	display: inline-block;
-	vertical-align: middle;
-}
-img[title="Instagram"] {
-	width: 4.5%;
-	display: inline-block;
-	vertical-align: middle;
+#gmail {
+    width: 4%; 
 }
 
-/*HOME*/
-.row {
-	background-color: gray;
-	text-align: center;
-}
 
 
 footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 100px;
     width: 100%;
+    text-align: center;
 }
 
-.jumbotron {
-	display: none;
-}
 @media only screen and (min-width: 800px) {
-	.jumbotron {
-		display: inline-block;
+	.dropbtn {
+	    display: none;
 	}
+    .navbar {
+        display: none;
+    } 
+    .nav {
+        display: inline-block;
+    }
+	.nav-justified{
+        color: #1F71FF;
+ 	}
+    .nav-justified > li > a:hover {
+      background-color: #94BBFF;
+    }
+ 	.active > a {
+        background-color: #1F71FF;
+        color:#0088cc;
+    }
+    
 }
 
-@media only screen and (min-width: 1200px) { {
+@media only screen and (min-width: 1200px) { 
+	.dropbtn {
+	    display: none;
+	}
+    .nav {
+        display: none;
+    }
+    .navbar {
+        display: inline-block;
+    } 
+
 	
 }

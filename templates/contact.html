@@ -1,4 +1,9 @@
 {% extends "templates/index.html" %}
 {% block content %} 
-	
+	<form action = "" method = "post">
+		<label>Subject: <input type = "text" name = "subject"></label>
+		<label>Message: <input type = "email" name = "message"></label>
+		<label>Phone Number (optional): <input type="tel" name="number"></label>
+		<input type = "submit" value = "Send">
+	</form> 
 {%endblock%}
