@@ -160,8 +160,8 @@ header {
      font-size: 21px;
      font-weight: 200;
      line-height: 2.1428571435;
-     background-color: #CEE7F0;
-     color: red;
+     background-color: #ff3600;
+     color: white;
 }
 
 .noJumbotron {
@@ -217,20 +217,14 @@ header {
         position: relative;
     }
 
-    .active {
-        color: red;
-        font-variant: small-caps;
-    }
-
     .jumbotron {
         display: block;
-     padding: 30px;
-     margin-bottom: 30px;
-     font-size: 21px;
-     font-weight: 200;
-     line-height: 2.1428571435;
-     color: inherit;
-     background-image: url(../static/pier.jpeg) no-repeat center;
+        padding: 30px;
+        margin-bottom: 30px;
+        font-size: 21px;
+        font-weight: 200;
+        line-height: 2.1428571435;
+        background-image: url('/static/blue.jpg') no-repeat center center;
     }
 
     .noJumbotron {
