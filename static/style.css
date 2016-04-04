@@ -1,19 +1,26 @@
 body{
 	margin: 1%;
 	padding:1%;
-	background-color: pink;
+	background-color: red;
 	font-size: 100%;
 	min-width: 500px;
 }
 
-header h1{
+#picture{
+	display: block;
+	height: 100%;
+	min-width: 100%;
+	text-align: center;
+}
+
+#name{
 	text-align: center;
 	font-family: sans-serif;
 }
 
 #mail{
 	text-align: center;
-	display: inline-block;
+	display: block;
 }
 
 img{
@@ -29,7 +36,6 @@ header h4{
 	padding-left: 5px;
 }
 
-/* Dropdown Button */
 .dropbtn {
     background-color: #1F71FF;
     color: white;
@@ -38,18 +44,16 @@ header h4{
     border: none;
 }
 
-/* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
     background-color: #94BBFF;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline-block;
+    z-index: 1;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -58,27 +62,45 @@ header h4{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
+    font-family: sans-serif;
     display: block;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+	background-color: #f1f1f1
+}
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+.show {
+	display:block;
+}
 
-@media only screen and (min-width: 800px) {
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow:hidden;
+    text-align: center;
+}
+
+/*HOME*/
+.row {
+	background-color: gray;
+	text-align: center;
+}
+
+@media (min-width: @screen-md-min) {
 	body{
-		background: cyan;
+		background-color: blue;
 	}
 }
 
-@media only screen and (min-width: 1200px) {
+@media (min-width: @screen-lg-min) {
 	body {
 		background: yellow;
 	}

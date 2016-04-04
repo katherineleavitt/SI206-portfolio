@@ -3,21 +3,35 @@
 	<head>
 		<title>Katherine Leavitt's Portfolio</title>
 	    <link rel="stylesheet" type="text/css" href="static/style.css"/>
-		<meta name = 'viewport' content='width=device-width,initial-scale=1'>
+	    <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset = "UTF-8">
 	</head>
 
 	<body>
 	  <header>
-		  	<h1>Katherine Leavitt</h1>
+	  		<section id="picture">
+	  			<img src="static/me.jpg" alt="me" class="img-rounded">
+		  		
+	  		</section>
+	  		<section id="name">
+	  			<h1>Katherine Leavitt</h1>
+	  		</section>
 		  	<section id="mail">
 		  		<a href="mailto:ksleavit@umich.edu">
-		  			<img src="static/gmail.png" alt="gmail"/>
+		  			<img src="static/gmail.png" alt="gmail" class="img-rounded"/>
 		  		</a>
 		  		<h4>ksleavit@umich.edu</h4>
 		  	</section>
 			<div class="dropdown">
-				<button onclick="myFunction()" class="dropbtn">| | |</button>
+				<button onclick="myFunction()" class="dropbtn">&#9776;</button>
 				  <div id="myDropdown" class="dropdown-content">
 				    <a href="home">Home</a>
 				    <a href="education">Education</a>
@@ -27,13 +41,9 @@
 			</div>
 
 			<script type="text/javascript">
-					/* When the user clicks on the button, 
-					toggle between hiding and showing the dropdown content */
 				function myFunction() {
 				    document.getElementById("myDropdown").classList.toggle("show");
 				}
-
-				// Close the dropdown menu if the user clicks outside of it
 				window.onclick = function(event) {
 					if (!event.target.matches('.dropbtn')) {
 
@@ -47,16 +57,32 @@
 				    	}
 					}	
 				}
-			</script>		
+			</script>
+			<h2>{{pageTitle}}</h2>		
 		</header>
 
-	  <section id = "left">
-	  </section>
-
-	  <section id = "center">
-	  </section>
+	  	{% block content %}
+			Never gonna see this either
+		{% endblock %}
 
 	  <footer>
+	  	<div>
+			<a href="https://twitter.com/katesleavitt">
+				<img title="Twitter" alt="Twitter" src="https://socialmediawidgets.files.wordpress.com/2014/03/01_twitter.png"/>
+			</a>
+			<a href="https://www.pinterest.com/ktloveitt/">
+				<img title="Pinterest" alt="Pinterest" src="https://socialmediawidgets.files.wordpress.com/2014/03/13_pinterest.png"/>
+			</a>
+			<a href="https://www.facebook.com/ksleavittt?ref=bookmarks">
+				<img title="Facebook" alt="Facebook" src="https://socialmediawidgets.files.wordpress.com/2014/03/02_facebook.png"/>
+			</a>
+			<a href="https://www.linkedin.com/in/katherine-leavitt-84509b117?trk=nav_responsive_tab_profile_pic">
+				<img title="LinkedIn" alt="LinkedIn" src="https://socialmediawidgets.files.wordpress.com/2014/03/07_linkedin.png"/>
+			</a>
+			<a href="https://www.instagram.com/katieleavitt/">
+				<img title="Instagram" alt="RSS" src="https://socialmediawidgets.files.wordpress.com/2014/03/10_instagram.png"/>
+			</a>
+</div>
 	  </footer>
 	</body>
 </html>
