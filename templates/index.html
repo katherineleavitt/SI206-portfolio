@@ -71,7 +71,9 @@
 		
 
 		<script type="text/javascript">
-				
+				$('ul.nav.nav-pills.nav-justified li a').click(function() {			
+				    $(this).parent().addClass('active').siblings().removeClass('active');			
+				});
 		</script>
 			
 
@@ -100,7 +102,8 @@
 			<a href="https://www.instagram.com/katieleavitt/">
 				<img title="Instagram" alt="RSS" src="https://socialmediawidgets.files.wordpress.com/2014/03/10_instagram.png"/>
 			</a>
-</div>
+		</div>
+		<p>&copy; Katherine Leavitt</p>
 	  </footer>
 	</body>
 </html>

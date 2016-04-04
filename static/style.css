@@ -140,6 +140,10 @@ html, body {
 footer, .pagecontent:after {
   height: 20px;
   margin-bottom: 25px; 
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 100%;
+  font-variant: small-caps;
 }
 
 header {
@@ -168,6 +172,7 @@ form {
         position: relative;
     }
 
+
 }
 
 @media only screen and (min-width: 1200px) { 
@@ -181,15 +186,14 @@ form {
         display: inline-block;
         font-size: 200%;
     } 
-    .jumbotron {
-        text-align: center;
-        margin: -100;
-        background: url('../static/me.jpg') no-repeat center center;
-        background-size: 100%;
+
+    footer {
+        position: relative;
     }
 
-    body {
-        position: relative;
+    .active {
+        color: red;
+        font-variant: small-caps;
     }
 	
 }
