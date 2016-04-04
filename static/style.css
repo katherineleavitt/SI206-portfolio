@@ -160,7 +160,7 @@ header {
      font-size: 21px;
      font-weight: 200;
      line-height: 2.1428571435;
-     background-color: #ff3600;
+     background: red;
      color: white;
 }
 
@@ -220,11 +220,11 @@ header {
     .jumbotron {
         display: block;
         padding: 30px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         font-size: 21px;
         font-weight: 200;
         line-height: 2.1428571435;
-        background-image: url('/static/blue.jpg') no-repeat center center;
+        background: url('/static/blue.jpg') no-repeat center center;
     }
 
     .noJumbotron {
