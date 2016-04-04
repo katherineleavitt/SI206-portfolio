@@ -1,16 +1,20 @@
-body{
-	margin: 1%;
-	padding:1%;
-	background-color: red;
-	font-size: 100%;
-	min-width: 500px;
+html {
+    position: relative;
+    min-height: 100%;
 }
 
-#picture{
-	display: block;
-	height: 100%;
-	min-width: 100%;
-	text-align: center;
+body{
+	padding:1%;
+	background: red;
+	font-size: 100%;
+	min-width: 500px;
+    margin: 0 0 100px; 
+}
+
+img{
+	width: 50%;
+	display: inline-block;
+	align: 0 auto;
 }
 
 #name{
@@ -22,12 +26,13 @@ body{
 	text-align: center;
 	display: block;
 }
-
-img{
+#gmail {
 	width: 4.5%;
 	display: inline-block;
 	vertical-align: middle;
 }
+
+
 
 header h4{
 	font-family: sans-serif;
@@ -78,14 +83,32 @@ header h4{
 	display:block;
 }
 
-footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 100px;
-    width: 100%;
-    overflow:hidden;
-    text-align: center;
+
+img[title="Twitter"] {
+	width: 4.5%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+img[title="Pinterest"] {
+	width: 4.5%;
+	display: inline-block;
+	vertical-align: middle;
+}
+img[title="Facebook"] {
+	width: 4.5%;
+	display: inline-block;
+	vertical-align: middle;
+}
+img[title="LinkedIn"] {
+	width: 4.5%;
+	display: inline-block;
+	vertical-align: middle;
+}
+img[title="Instagram"] {
+	width: 4.5%;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 /*HOME*/
@@ -94,16 +117,24 @@ footer {
 	text-align: center;
 }
 
-@media (min-width: @screen-md-min) {
-	body{
-		background-color: blue;
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+}
+
+.jumbotron {
+	display: none;
+}
+@media only screen and (min-width: 800px) {
+	.jumbotron {
+		display: inline-block;
 	}
 }
 
-@media (min-width: @screen-lg-min) {
-	body {
-		background: yellow;
-	}
-}
-@media print {
+@media only screen and (min-width: 1200px) { {
+	
 }
