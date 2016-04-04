@@ -6,9 +6,11 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset = "UTF-8">
+		{% block javas %}
+		{% endblock %}
 	</head>
 
-	<body>
+	<body onload = "displayTime();">
 	  <header>
 	  		<div class="col-sm-12 col-md-6">
   				<img src="static/me.jpg" alt="me" class="img-rounded" id="me">
@@ -23,8 +25,15 @@
 				ksleavit@umich.edu</h4>
 		  		</div>
 		  	</div>
-
-		<section id="drop">
+		  	<nav class="navbar navbar-light bg-faded">
+			  <div class="nav navbar-nav">
+			    <p><a class="nav-item nav-link active" href="home">Home <span class="sr-only">(current)</span></a>  |  
+				    <a href="education">Education</a>  |  
+					<a href="work">Work &amp; Projects</a>  |  
+					<a href="contact">Contact</a></p>
+			  </div>
+			</nav>
+			<section id="drop">
 			<div class="dropdown">
 				<button onclick="myFunction()" class="dropbtn img-rounded">&#9776; Menu</button>
 				  <div id="myDropdown" class="dropdown-content img-rounded">
@@ -54,6 +63,8 @@
 				}
 			</script>
 		</section>
+		</div>
+		
 			<ul class="nav nav-pills nav-justified" id="myPills">
 			  <li class="active"><a href="home" data-toggle="tab">Home</a></li>
 				   <li><a href="education">Education</a></li>
@@ -67,14 +78,7 @@
 				});
 			</script>
 
-			<nav class="navbar navbar-light bg-faded">
-			  <div class="nav navbar-nav">
-			    <a class="nav-item nav-link active" href="home">Home <span class="sr-only">(current)</span></a>
-				    <a href="education">Education</a>
-					<a href="work">Work &amp; Projects</a>
-					<a href="contact">Contact</a>
-			  </div>
-			</nav>
+			
 
 
 

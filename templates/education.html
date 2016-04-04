@@ -1,8 +1,20 @@
 {% extends "templates/index.html" %}
-{% block content %} 
+{% block javas %}
+	
+	<script type="text/javascript">
+		function displayTime() {
+		var date1 = new Date();
+		var date2 = new Date('09/03/2016');
+		var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+		var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+		document.getElementById('days').innerHTML = diffDays;		
+		}
+	</script>
 
+{% endblock %}
+{% block content %} 
 	<div class="col-sm-12 col-md-6">
-		<h2>Courses:</h2>
+		<h2>Courses</h2>
 		<ul>
 			<li>SI 206: Agile Web Development</li>
 				<ul>
@@ -39,29 +51,34 @@
 		</ul>
 	</div>
 	<div class="col-sm-12 col-md-6">
-		<h2>Extracurriculars:</h2>
+		<h2>Extracurriculars</h2>
 		<ul>
 			<li>Girls in EECS (gEECS)</li>
 			<li>Supporting Women in Engineering (SWE)</li>
 			<li>Delta Gamma Sorority</li>
 		</ul>
 	</div>
-	<div class="col-sm-12 col-md-6">
+	<div class="col-sm-12 col-md-6 collegepics" >
 		<h3>Some snapshots of me at college:</h3>
 		<div class="col-sm-12 col-md-6 col-lg-3">
-		    <img src = "static/dg.jpg" alt = "dg"/>
+		    <img src = "static/dg.jpg" alt = "dg" class="img-rounded"/>
 		</div>
 		<div class="col-sm-12 col-md-6 col-lg-3">
-		    <img src = "static/gameday.jpg" alt = "gameday"/>
+		    <img src = "static/gameday.jpg" alt = "gameday" class="img-rounded"/>
 		</div>
 		<div class="col-sm-12 col-md-6 col-lg-3">
-		    <img src = "static/sarah.jpg" alt = "sarah"/>
+		    <img src = "static/sarah.jpg" alt = "sarah" class="img-rounded"/>
 		</div>
 		<div class="col-sm-12 col-md-6 col-lg-3">
-		    <img src = "static/winter.jpg" alt = "winter"/>
+		    <img src = "static/winter.jpg" alt = "winter" class="img-rounded"/>
 		</div>
   	</div>
   	<div>
-  		
+  		<div class="timer" onload="getTimeRemaining(endtime);">
+  			<h3>Countown to Football Saturdays:</h3>
+  				<h4>
+  					<span id="days"></span> Days!
+  				</h4>  
+  		</div>
   	</div>
 {%endblock%}

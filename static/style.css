@@ -6,26 +6,24 @@ body {
     position: absolute;
 }
 
-ul  {
- padding-left:0;   
+ul{ 
+    margin: 1em;
+    border-radius: .25%;
+    text-align: left;
 }
-ul li  {
- list-style-position:inside
+ul li {
+    list-style-position: inherit;
 }
 
 img {
     width: 100%;
-    text-align center;
+    text-align: center;
 }
 
 p {
     font-family: sans-serif;
 }
 
-footer img{
-    width: 40px;
-    display: inline-block;
-}
 
 #me {
 	width: 20%;
@@ -33,24 +31,22 @@ footer img{
 	vertical-align: middle;
 }
 
-header {
-    width: 100%;
-    text-align: center;
-    background-color: light gray;
-}
+
+
 
 .dropbtn {
-    background-color: #1F71FF;
+    background-color: #2D88B5;
     color: white;
     padding: 10px;
     font-size: 18px;
     border: none;
     vertical-align: right;
     border-radius: 20%;
+    position: relative;
 }
 
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #94BBFF;
+    background-color: #B5D7E8;
 }
 
 .dropdown {
@@ -64,13 +60,13 @@ header {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 120px;
+    min-width: 140px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     text-align: right;
 }
 
 .dropdown-content a {
-    color: #1F71FF;
+    color: #2D88B5;
     padding: 12px 16px;
     text-decoration: none;
     font-family: sans-serif;
@@ -78,7 +74,7 @@ header {
 }
 
 .dropdown-content a:hover {
-background-color: #f1f1f1
+background-color: #B5D7E8
 }
 
 .show {
@@ -93,18 +89,73 @@ background-color: #f1f1f1
     width: 4%; 
 }
 
+footer img {
+    width: 40px;
+    display: inline-block;
+}
+
 footer, .pagecontent:after {
     position: absolute;
     right: 0;
     bottom: -10;
     left: 0;
     text-align: center;
-
 }
 
 html body {
     background-color: #90BDD4;
 
+}
+
+.collegepics img {
+    display: inline-block;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+h5 {
+    text-align: left;
+    padding-top: 6px;
+}
+
+.projects {
+    padding-top: 10px;
+}
+
+.work {
+    padding-bottom: 20px
+}
+
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.pagecontent {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: 30px; 
+}
+.pagecontent:after {
+  content: "";
+  display: block;
+}
+footer, .pagecontent:after {
+  height: 20px;
+  margin-bottom: 25px; 
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+
+}
+
+form {
+    text-align: right;
+    margin-right: 28%;
 }
 
 @media only screen and (min-width: 800px) {
@@ -118,22 +169,7 @@ html body {
         display: inline;
     }
 
-    #beach {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-    }
 
-    #camp {
-        position: absolute;
-        top: 0px;
-    }
-
-    #friends {
-        position: absolute;
-        top: 435px;
-        left: 0;
-    }
 
 
 
@@ -144,12 +180,16 @@ html body {
 	.dropbtn {
 	    display: none;
 	}
-    .nav {
-        display: none;
-    }
+
     .navbar {
         display: inline-block;
+        font-size: 100%;
     } 
-
+    .jumbotron {
+        text-align: center;
+        margin: -100;
+        background: url('../static/me.jpg') no-repeat center center;
+        background-size: 100%;
+    }
 	
 }
