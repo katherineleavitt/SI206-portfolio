@@ -6,7 +6,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
+#   http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,8 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-from mailer import Mailer
-from mailer import Message
 import webapp2
 import os
 import logging
@@ -49,18 +47,8 @@ class ContactHandler(webapp2.RequestHandler):
         self.response.write(template.render())
 
     def post(self):
-        logging.info("TRYING TO Contact")
-        message = Message(From=self.request.get('email'),
-                  To="ksleavit@umich.edu")
-        message.Subject = self.request.get('subject')
-        message.Html = self.request.get('message')
-
-        sender = Mailer('smtp.example.com')
-        sender.send(message)
-
         template = JINJA_ENVIRONMENT.get_template('templates/contacted.html')
-        self.response.write(template.render())       
-
+        self.response.write(template.render({'pass': self.request.get('pw')}))
 
 app = webapp2.WSGIApplication([
     ('/', HomeHandler),
@@ -69,4 +57,5 @@ app = webapp2.WSGIApplication([
     ('/work', WorkHandler),
     ('/contact', ContactHandler),
     ('/contacted', ContactHandler),
+    ('/.*', HomeHandler)
 ], debug=True)

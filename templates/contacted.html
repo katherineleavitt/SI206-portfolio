@@ -1,4 +1,13 @@
 {% extends "templates/index.html" %}
 {% block content %} 
-	<h2>Your message has been sent!</h2>
+    {% if pass == 'ktroxmysox' %} 
+    	<h3>
+        I lied, there is no secret!
+		</h3>
+    {%else%}
+        Bad credentials.  Try again.
+        <form action = "/contact" method = "post">
+            <label>password: <input type = "password" name = "pw"></label>
+            <input type = "submit" value = "Submit">
+    {%endif%}
 {%endblock%}

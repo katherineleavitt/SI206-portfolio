@@ -77,6 +77,10 @@ p {
 background-color: #B5D7E8
 }
 
+.dropdown-content>li.active>a{
+    
+}
+
 .show {
     display:block;
 }
@@ -191,6 +195,9 @@ header {
     }
     .noJumbotron {
         display: block;
+    }
+    .active {
+        font-variant: small-caps;
     }
 
 
