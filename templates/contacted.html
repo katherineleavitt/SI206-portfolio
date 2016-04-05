@@ -1,9 +1,7 @@
 {% extends "templates/index.html" %}
 {% block content %} 
     {% if pass == 'ktroxmysox' %} 
-    	<h3>
-        I lied, there is no secret!
-		</h3>
+    	<h3>I lied, there is no secret!</h3>
     {%else%}
         Bad credentials.  Try again.
         <form action = "/contact" method = "post">
