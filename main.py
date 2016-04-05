@@ -14,6 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+from mailer import Mailer
+from mailer import Message
 import webapp2
 import os
 import logging
@@ -28,7 +30,7 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 class HomeHandler(webapp2.RequestHandler):
     def get(self):
         template = JINJA_ENVIRONMENT.get_template('templates/home.html')
-        self.response.write(template.render({'subtitle': 'HOME'}))
+        self.response.write(template.render())
 
 class EducationHandler(webapp2.RequestHandler):
     def get(self):
@@ -46,7 +48,18 @@ class ContactHandler(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template('templates/contact.html')
         self.response.write(template.render())
 
-        
+    def post(self):
+        logging.info("TRYING TO Contact")
+        message = Message(From=self.request.get('email'),
+                  To="ksleavit@umich.edu")
+        message.Subject = self.request.get('subject')
+        message.Html = self.request.get('message')
+
+        sender = Mailer('smtp.example.com')
+        sender.send(message)
+
+        template = JINJA_ENVIRONMENT.get_template('templates/contacted.html')
+        self.response.write(template.render())       
 
 
 app = webapp2.WSGIApplication([
@@ -55,4 +68,5 @@ app = webapp2.WSGIApplication([
     ('/education', EducationHandler),
     ('/work', WorkHandler),
     ('/contact', ContactHandler),
+    ('/contacted', ContactHandler),
 ], debug=True)
